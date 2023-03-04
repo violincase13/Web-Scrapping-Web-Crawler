@@ -28,7 +28,7 @@ for link in links:
         response = requests.get(link.get('href'))
 
         os.makedirs('/home/flavia/Desktop/crawler/pdf', exist_ok=True)
-        with open(os.path.join('/home/flavia/Desktop/crawler/pdf', "pdf"+str(i)+".pdf"), mode = 'wb') as f:
+        with open(os.path.join('/home/user/Desktop/crawler/pdf', "pdf"+str(i)+".pdf"), mode = 'wb') as f:
             f.write(response.content)
             f.close
             print("File ", i, " downloaded")
