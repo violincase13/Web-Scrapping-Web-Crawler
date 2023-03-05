@@ -27,7 +27,7 @@ for link in links:
         # Get response object for link
         response = requests.get(link.get('href'))
 
-        os.makedirs('/home/flavia/Desktop/crawler/pdf', exist_ok=True)
+        os.makedirs('/home/user/Desktop/crawler/pdf', exist_ok=True)
         with open(os.path.join('/home/user/Desktop/crawler/pdf', "pdf"+str(i)+".pdf"), mode = 'wb') as f:
             f.write(response.content)
             f.close
